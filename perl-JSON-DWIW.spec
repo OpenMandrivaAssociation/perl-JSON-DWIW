@@ -1,6 +1,6 @@
 %define realname   JSON-DWIW
-%define version    0.32
-%define release    %mkrel 2
+%define version    0.33
+%define release    %mkrel 1
 
 Name:       perl-%{realname}
 Version:    %{version}
