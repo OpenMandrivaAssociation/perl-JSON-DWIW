@@ -1,17 +1,18 @@
-%define realname   JSON-DWIW
-%define version    0.35
-%define release    %mkrel 1
+%define upstream_name    JSON-DWIW
+%define upstream_version 0.35
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Return a true or false value when
-Url:        http://search.cpan.org/dist/%{realname}
-Source:     http://www.cpan.org/modules/by-module/JSON/%{realname}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/JSON/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Other JSON modules require setting several parameters before calling the
@@ -36,7 +37,7 @@ Encoding
     etc., get stringified, and undef becomes null.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
