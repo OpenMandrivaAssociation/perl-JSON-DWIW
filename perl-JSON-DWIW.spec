@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Return a true or false value when
 License:    GPL+ or Artistic
@@ -59,4 +59,3 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorarch/JSON
 %perl_vendorarch/auto/JSON
-
