@@ -1,9 +1,9 @@
 %define upstream_name    JSON-DWIW
-%define upstream_version 0.35
+%define upstream_version 0.36
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Return a true or false value when
 License:    GPL+ or Artistic
