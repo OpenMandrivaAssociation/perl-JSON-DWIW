@@ -1,5 +1,5 @@
 %define upstream_name    JSON-DWIW
-%define upstream_version 0.39
+%define upstream_version 0.40
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
