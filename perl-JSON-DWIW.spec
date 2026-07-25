@@ -2,14 +2,14 @@
 %define upstream_version 0.47
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Version:    %{upstream_version}
+Release:	5
 
 Summary:    Return a true or false value when
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/JSON/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/JSON-DWIW
+Source0:    https://cpan.metacpan.org/authors/id/D/DO/DOWENS/JSON-DWIW-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
