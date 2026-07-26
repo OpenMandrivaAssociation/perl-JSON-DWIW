@@ -1,15 +1,13 @@
 %define upstream_name    JSON-DWIW
-%define upstream_version 0.47
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	5
+Version:    0.47
+Release:	6
 
 Summary:    Return a true or false value when
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/JSON-DWIW
-Source0:    https://cpan.metacpan.org/authors/id/D/DO/DOWENS/JSON-DWIW-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/D/DO/DOWENS/JSON-DWIW-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -38,7 +36,7 @@ Encoding
     etc., get stringified, and undef becomes null.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -112,8 +110,7 @@ rm -rf %buildroot
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.350.0-2mdv2010.0
 + Revision: 405951
 - force rebuild
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.47 fixed license field
 
 * Thu Jul 09 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.35-1mdv2010.0
 + Revision: 393793
